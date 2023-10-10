@@ -61,5 +61,7 @@ df_trafikkdata = df_trafikkdata.rename(columns={'måned': 'baremåned'}) #for å
 Sammensatt_df = pd.merge(df, df_trafikkdata, on="baremåned") #kombiner df’ene
 drept_data = Sammensatt_df.groupby("baremåned")["08329: Drepte eller skadde i trafikkulykker,"].sum()
 drept_data.plot(kind="line", figsize=(10, 5), title="Antall drept per år")
+#Var usikker på om du ville vi skulle regne ut i oppgaven altså indeksen, men regnet med at du mente: ta antall drepte i 2005, og gange det med indeksen fra tabellen 
+#2005: antall drepte i 2005 * 100, 2006: antall drepte i 2005 * 101,7 osv (ettersom jeg ikke tror dette var en del av oppgaven legger jeg det til bare som en kommentar med hvordan jeg hadde løst det.)
 
 
