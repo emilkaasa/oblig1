@@ -52,3 +52,14 @@ plt.xlabel("år")
 plt.ylabel("")
 plt.legend(title="Skadegrad", bbox_to_anchor=(1.05, 1), loc='upper left')
 
+#oppgave F)
+
+file_path_to_csv = "trafikkindeks_fra_1995.csv"
+df_trafikkdata = pd.read_csv(file_path_to_csv)
+df_trafikkdata
+df_trafikkdata = df_trafikkdata.rename(columns={'måned': 'baremåned'}) #for å matche df og den nye csv’en 
+Sammensatt_df = pd.merge(df, df_trafikkdata, on="baremåned") #kombiner df’ene
+drept_data = Sammensatt_df.groupby("baremåned")["08329: Drepte eller skadde i trafikkulykker,"].sum()
+drept_data.plot(kind="line", figsize=(10, 5), title="Antall drept per år")
+
+
