@@ -1,0 +1,14 @@
+95% konfidensintervall for 𝛃 
+
+Konfidensintervallet = Estimat for 𝛃 ± (t-verdi * Standardfeil)
+
+Estimat for 𝛃: 4.453e-02
+Standardfeil: 2.166e-03
+t-verdi: 20.56
+
+Konfidensintervallet = 4.453e-02 ± (20.56 * 2.166e-03)
+Nedre grense: 4.404e-02
+Øvre grense: 4.502e-02
+
+Vi kan være 95% sikre på at verdien av koeffisienten ligger mellom Nedre grense: 4.404e-02(0.04404) og 
+Øvre grense: 4.502e-02 (0.04502)
